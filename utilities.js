@@ -36,3 +36,46 @@ function LiveWrite({text, selector, speed = 0.1, delay = 0, cursor = "●"}) {
         };
     });
 }
+
+function displayLogoAtCenter({ imageUrl, duration = 2, delay = 0, maxWidth = "20vw", maxHeight = "20vh", fadeDuration = 2, zIndex = 1000} = {}) {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    const imgElement = document.createElement("img");
+
+                    imgElement.src = imageUrl;
+                    imgElement.style.position = "fixed";
+                    imgElement.style.top = "50%";
+                    imgElement.style.left = "50%";
+                    imgElement.style.transform = "translate(-50%, -50%)";
+                    imgElement.style.zIndex = zIndex;
+                    imgElement.style.maxWidth = maxWidth;
+                    imgElement.style.maxHeight = maxHeight;
+
+                    imgElement.style.opacity = "0";
+                    imgElement.style.transition = `opacity ${fadeDuration}s ease-in-out`;
+
+                    document.body.appendChild(imgElement);
+
+                    // Fade in
+                    setTimeout(() => {
+                        imgElement.style.opacity = "1";
+                    }, 10);
+
+                    // Fade out after duration
+                    setTimeout(() => {
+                        imgElement.style.opacity = "0";
+
+                        setTimeout(() => {
+                            imgElement.remove();
+                            resolve(); // Resolve when the animation is fully done
+                        }, fadeDuration * 1000);
+                    }, duration * 1000);
+
+                    // Return a function to manually cancel and remove the logo
+                    return () => {
+                        imgElement.remove();
+                        resolve();
+                    };
+                }, delay * 1000);
+            });
+        }
