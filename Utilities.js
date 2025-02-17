@@ -79,3 +79,12 @@ export function DisplayLogoAtCenter({ imageUrl, duration = 2, delay = 0, maxWidt
         }, delay * 1000);
     });
 }
+
+export function checkInternetConnection() {
+    window.onload = function() {
+        if (!navigator.onLine) {
+            alert("No internet connection.");
+            window.close()
+        }
+    }
+} 
