@@ -1,6 +1,6 @@
 # Usage
 
-### Live write
+> Live write
 ```
 LiveWrite({
     text: "Hello, this is a typing effect!",
@@ -12,13 +12,13 @@ LiveWrite({
 
 ```
 
-### Display logo at center of screen
-> Basic
+> Display logo at center of screen
+#### Basic
 ```
 displayLogoAtCenter({ imageUrl: "https://example.com/logo.png" });
 ```
 
-> Custom Size & Delay
+#### Custom Size & Delay
 ```
 displayLogoAtCenter({
     imageUrl: "https://example.com/logo.png",
@@ -30,7 +30,7 @@ displayLogoAtCenter({
 
 ```
 
-> Manually Remove Before Animation Ends
+#### Manually Remove Before Animation Ends
 ```
 const removeLogo = displayLogoAtCenter({
     imageUrl: "https://example.com/logo.png",
