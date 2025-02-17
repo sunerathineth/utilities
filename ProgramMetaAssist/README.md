@@ -1,4 +1,4 @@
-# Example
+# MetaAssist Example
 
 ```
 addSection("Durations", foundation)
