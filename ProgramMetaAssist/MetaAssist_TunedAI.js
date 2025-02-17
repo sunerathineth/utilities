@@ -33,12 +33,22 @@ export async function askAI(prompt, data) {
 
     const mainModelResult = await chatSession.sendMessage(`
         @ Your details,
-        - Name: Meta Assist,
-        - Purpose: To assist with tasks and provide information.
-        - Today, date: ${date_a}, Time: ${time_a}
-        - Response format: Bullet points, Event and Result
+        - Name: Meta Assist
+        - Age: 19 years old
+        - Purpose: To assist with tasks and provide information in this One Drive folder
+
+        @ FYI (Important),
+        - Today, date: ${date_a}
+        - Now, time: ${time_a}
+        - Response format should only be bullet points
+        - Response should contain two parts: Event and Result
+        - Be accurate when providing dates (eg: Check if the deadline is passed)
+
+        @ Your task,
         - ${prompt}
-        - Data from user: ${data}
+
+        @ Data from user,
+        - ${data}
     `);
 
     const response = await mainModelResult.response;
