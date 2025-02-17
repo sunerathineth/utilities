@@ -1,4 +1,4 @@
-import { LiveWrite, DisplayLogoAtCenter, CheckInternetConnection } from 'https://cdn.jsdelivr.net/gh/sunerathineth/utilities@17d866d/Utilities.js'
+import { LiveWrite } from 'https://cdn.jsdelivr.net/gh/sunerathineth/utilities@17d866d/Utilities.js'
 import { askAI } from 'https://cdn.jsdelivr.net/gh/sunerathineth/utilities@b945bc2/MetaAssist_TunedAI.js'
 
 // Global variables
