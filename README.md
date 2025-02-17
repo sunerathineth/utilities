@@ -12,14 +12,14 @@ LiveWrite({
 
 ```
 
-### Display logo at center of screen 
+### Display logo at center of screen
+> Basic
 ```
-// Basic
 displayLogoAtCenter({ imageUrl: "https://example.com/logo.png" });
 ```
 
+> Custom Size & Delay
 ```
-// Basic
 displayLogoAtCenter({
     imageUrl: "https://example.com/logo.png",
     duration: 3,
@@ -30,8 +30,8 @@ displayLogoAtCenter({
 
 ```
 
+> Manually Remove Before Animation Ends
 ```
-// Basic
 const removeLogo = displayLogoAtCenter({
     imageUrl: "https://example.com/logo.png",
     duration: 10
