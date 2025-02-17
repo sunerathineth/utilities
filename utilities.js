@@ -79,3 +79,9 @@ function displayLogoAtCenter({ imageUrl, duration = 2, delay = 0, maxWidth = "20
         }, delay * 1000);
     });
 }
+
+
+export {
+    LiveWrite,
+    displayLogoAtCenter
+}
