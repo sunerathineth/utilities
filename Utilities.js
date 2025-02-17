@@ -80,7 +80,7 @@ export function DisplayLogoAtCenter({ imageUrl, duration = 2, delay = 0, maxWidt
     });
 }
 
-export function checkInternetConnection() {
+export function CheckInternetConnection() {
     window.onload = function() {
         if (!navigator.onLine) {
             alert("No internet connection.");
