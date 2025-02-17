@@ -24,7 +24,7 @@ export function addSection(sectionName, container) {
     container.insertAdjacentHTML("beforeend", `<div class="newSection"> ${sectionName} </div>`);
 }
 
-export function addTask(objective, userData) {
+export function addTask(objective, userData, container) {
     let currentID = idCount;
     const taskHTML = `
         <div class="taskContainer">
@@ -39,10 +39,10 @@ export function addTask(objective, userData) {
         </div>
     `;
     
-    foundation.insertAdjacentHTML("beforeend", taskHTML);
+    container.insertAdjacentHTML("beforeend", taskHTML);
     idCount++;
 
-    let taskElement = foundation.querySelector(`.newTask-${currentID}`);
+    let taskElement = container.querySelector(`.newTask-${currentID}`);
     let startTime = performance.now();
     
     let timerInterval = setInterval(() => {
@@ -89,12 +89,12 @@ async function askQuestion(taskID) {
 
     const output = await askAI(question, "");
 
-        LiveWrite({
-            text: output,
-            selector: `#response-${taskID}`,
-            speed: 0.05,
-            delay: 0
-        });
+    LiveWrite({
+        text: output,
+        selector: `#response-${taskID}`,
+        speed: 0.05,
+        delay: 0
+    });
 }
 
 window.askQuestion = askQuestion;
