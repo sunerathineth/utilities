@@ -1,4 +1,6 @@
 # Usage
+
+### LiveWrite
 ```
 LiveWrite({
     text: "Hello, this is a typing effect!",
@@ -9,4 +11,3 @@ LiveWrite({
 });
 
 ```
-The background color is `#ffffff` for light mode and `#000000` for dark mode.
