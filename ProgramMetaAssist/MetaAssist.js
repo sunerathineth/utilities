@@ -1,5 +1,5 @@
 import { LiveWrite } from 'https://cdn.jsdelivr.net/gh/sunerathineth/utilities@17d866d/Utilities.js'
-import { askAI } from 'https://cdn.jsdelivr.net/gh/sunerathineth/utilities@a22d78a/MetaAssist_TunedAI.js'
+import { askAI } from 'https://cdn.jsdelivr.net/gh/sunerathineth/utilities@a22d78a/ProgramMetaAssist/MetaAssist_TunedAI.js'
 
 // Global variables
 
