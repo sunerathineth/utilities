@@ -83,5 +83,5 @@ function DisplayLogoAtCenter({ imageUrl, duration = 2, delay = 0, maxWidth = "20
 
 export {
     LiveWrite,
-    DisplayLogoAtCenter,
+    DisplayLogoAtCenter
 }
