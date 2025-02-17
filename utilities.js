@@ -1,4 +1,4 @@
-function LiveWrite({text, selector, speed = 0.1, delay = 0, cursor = "●"}) {
+export function LiveWrite({text, selector, speed = 0.1, delay = 0, cursor = "●"}) {
     return new Promise((resolve) => {
         const element = document.querySelector(selector);
         if (!element) {
@@ -37,7 +37,7 @@ function LiveWrite({text, selector, speed = 0.1, delay = 0, cursor = "●"}) {
     });
 }
 
-function DisplayLogoAtCenter({ imageUrl, duration = 2, delay = 0, maxWidth = "20vw", maxHeight = "20vh", fadeDuration = 2, zIndex = 1000} = {}) {
+export function DisplayLogoAtCenter({ imageUrl, duration = 2, delay = 0, maxWidth = "20vw", maxHeight = "20vh", fadeDuration = 2, zIndex = 1000} = {}) {
     return new Promise((resolve) => {
         setTimeout(() => {
             const imgElement = document.createElement("img");
@@ -80,8 +80,3 @@ function DisplayLogoAtCenter({ imageUrl, duration = 2, delay = 0, maxWidth = "20
     });
 }
 
-
-export {
-    LiveWrite,
-    DisplayLogoAtCenter
-}
