@@ -1,6 +1,6 @@
-export async function askAI(prompt, data) {
-    import { GoogleGenerativeAI, HarmBlockThreshold, HarmCategory } from "https://cdn.skypack.dev/@google/generative-ai";
+import { GoogleGenerativeAI, HarmBlockThreshold, HarmCategory } from "https://cdn.skypack.dev/@google/generative-ai";
 
+export async function askAI(prompt, data) {
     let model_apiKey = "AIzaSyAiSUQbyel_gOTBMGwRMMtpueML79oJRoo";
     const genAI = new GoogleGenerativeAI(model_apiKey);
 
