@@ -1,0 +1,77 @@
+.newSection {
+  width: 100%;
+  min-height: 45px;
+  border-radius: 10px;
+  align-items: center;
+  display: flex;
+  padding: 0px 15px 0px 15px;
+  background: rgba(255, 255, 255, 0.802);
+  color: black;
+  font-weight: bolder;
+  font-size: 24px;
+  margin-top: 25px;
+}
+.taskTitle {
+  height: 45px;
+  padding: 20px 0px 10px 0px;
+}
+.newTask {
+  width: 100%;
+  min-height: 45px;
+  padding: 15px;
+  line-height: 30px;
+  font-size: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin-top: 15px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+
+/* Quiz */
+
+
+.askBtn {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.dropdownPanel {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background: #00000058;
+    border-radius: 5px;
+}
+.questionInput {
+    width: 80%;
+    padding: 5px;
+    margin-right: 5px;
+    background: transparent;
+    border: 1px solid white;
+    outline: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+.submitBtn {
+    padding: 5px 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+.responseBox {
+    margin-top: 20px;
+    padding: 5px;
+    background: transparent;
+    border-radius: 5px;
+}
