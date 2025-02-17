@@ -99,7 +99,7 @@ async function askQuestion(taskID) {
 
 window.askQuestion = askQuestion;
 
-export function checkTasks() {
+export function CheckTasks() {
   if (isZero) {
     foundation.innerHTML += `<div style="width: 100%; height: 100%; justify-content: center; align-items: center; display: flex; margin-top: 115px;"> No tasks have been initiated. </div>`;
   }
