@@ -10,7 +10,7 @@ let data
 let output
 let idCount = 0
 let isZero = true
-
+const taskData = {}
 
 // Functions
 
@@ -25,6 +25,8 @@ export function addSection(sectionName, container) {
 }
 
 export function addTask(objective, userData, container) {
+    let taskID = Object.keys(taskData).length + 1
+    taskData[taskID] = userData
     let currentID = idCount;
     const taskHTML = `
         <div class="taskContainer">
