@@ -10,6 +10,7 @@ let data
 let output
 let idCount = 0
 let isZero = true
+let taskData = {}
 
 // Functions
 
@@ -24,7 +25,9 @@ export function addSection(sectionName, container) {
 }
 
 export function addTask(objective, userData, container) {
-    data = userData
+    let taskID = Object.keys(taskData).length + 1
+    taskData[taskID] = data
+
     let currentID = idCount;
     const taskHTML = `
         <div class="taskContainer">
@@ -87,7 +90,9 @@ async function askQuestion(taskID) {
 
     responseBox.innerText = "Thinking...";
 
-    const output = await askAI(question, data);
+    let taskData = taskData[taskID] || "";
+
+    const output = await askAI(question, taskData);
 
     LiveWrite({
         text: output,
